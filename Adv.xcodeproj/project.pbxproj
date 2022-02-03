@@ -12,6 +12,7 @@
 		71BCA07D27AC27D00084F33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BCA07C27AC27D00084F33B /* Assets.xcassets */; };
 		71BCA08027AC27D00084F33B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BCA07F27AC27D00084F33B /* Preview Assets.xcassets */; };
 		71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA08627AC27FF0084F33B /* ViewModifierExamp.swift */; };
+		71BCA08927AC2A6B0084F33B /* ButtonStyleExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA08827AC2A6B0084F33B /* ButtonStyleExamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		71BCA07C27AC27D00084F33B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71BCA07F27AC27D00084F33B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71BCA08627AC27FF0084F33B /* ViewModifierExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierExamp.swift; sourceTree = "<group>"; };
+		71BCA08827AC2A6B0084F33B /* ButtonStyleExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleExamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				71BCA07827AC27CF0084F33B /* AdvApp.swift */,
 				71BCA07A27AC27CF0084F33B /* ContentView.swift */,
 				71BCA08627AC27FF0084F33B /* ViewModifierExamp.swift */,
+				71BCA08827AC2A6B0084F33B /* ButtonStyleExamp.swift */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */,
+				71BCA08927AC2A6B0084F33B /* ButtonStyleExamp.swift in Sources */,
 				71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */,
 				71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */,
 			);
