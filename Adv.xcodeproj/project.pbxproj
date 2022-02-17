@@ -14,6 +14,7 @@
 		71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA08627AC27FF0084F33B /* ViewModifierExamp.swift */; };
 		71BCA08927AC2A6B0084F33B /* ButtonStyleExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA08827AC2A6B0084F33B /* ButtonStyleExamp.swift */; };
 		71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA09727AC5F010084F33B /* AnyTransitionExamp.swift */; };
+		71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAA47C27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		71BCA08627AC27FF0084F33B /* ViewModifierExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierExamp.swift; sourceTree = "<group>"; };
 		71BCA08827AC2A6B0084F33B /* ButtonStyleExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleExamp.swift; sourceTree = "<group>"; };
 		71BCA09727AC5F010084F33B /* AnyTransitionExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionExamp.swift; sourceTree = "<group>"; };
+		71FAA47C27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectExamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				71BCA08627AC27FF0084F33B /* ViewModifierExamp.swift */,
 				71BCA08827AC2A6B0084F33B /* ButtonStyleExamp.swift */,
 				71BCA09727AC5F010084F33B /* AnyTransitionExamp.swift */,
+				71FAA47C27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */,
 				71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */,
 				71BCA08927AC2A6B0084F33B /* ButtonStyleExamp.swift in Sources */,
 				71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */,
