@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7122CD3F27E1ADB5007F1668 /* GenericsExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD3E27E1ADB5007F1668 /* GenericsExamp.swift */; };
 		7122CD4127E1B172007F1668 /* ViewBuilderExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4027E1B172007F1668 /* ViewBuilderExamp.swift */; };
+		7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4227E1BAE6007F1668 /* PreferenceKeyExamp.swift */; };
+		7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4527E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift */; };
+		7122CD4827E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4727E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift */; };
 		71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07827AC27CF0084F33B /* AdvApp.swift */; };
 		71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07A27AC27CF0084F33B /* ContentView.swift */; };
 		71BCA07D27AC27D00084F33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BCA07C27AC27D00084F33B /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		7122CD3E27E1ADB5007F1668 /* GenericsExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsExamp.swift; sourceTree = "<group>"; };
 		7122CD4027E1B172007F1668 /* ViewBuilderExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderExamp.swift; sourceTree = "<group>"; };
+		7122CD4227E1BAE6007F1668 /* PreferenceKeyExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyExamp.swift; sourceTree = "<group>"; };
+		7122CD4527E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyExamp.swift; sourceTree = "<group>"; };
+		7122CD4727E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyExamp.swift; sourceTree = "<group>"; };
 		71BCA07527AC27CF0084F33B /* Adv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BCA07827AC27CF0084F33B /* AdvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvApp.swift; sourceTree = "<group>"; };
 		71BCA07A27AC27CF0084F33B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7122CD4427E1BD84007F1668 /* PreferenceKeyADV */ = {
+			isa = PBXGroup;
+			children = (
+				7122CD4227E1BAE6007F1668 /* PreferenceKeyExamp.swift */,
+				7122CD4527E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift */,
+				7122CD4727E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift */,
+			);
+			path = PreferenceKeyADV;
+			sourceTree = "<group>";
+		};
 		71BCA06C27AC27CF0084F33B = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +90,7 @@
 				71FAA47E27C0101E00C8C3A5 /* CustomShapesExamp.swift */,
 				7122CD3E27E1ADB5007F1668 /* GenericsExamp.swift */,
 				7122CD4027E1B172007F1668 /* ViewBuilderExamp.swift */,
+				7122CD4427E1BD84007F1668 /* PreferenceKeyADV */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -161,12 +178,15 @@
 				71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */,
 				7122CD3F27E1ADB5007F1668 /* GenericsExamp.swift in Sources */,
 				71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */,
+				7122CD4827E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift in Sources */,
 				71FAA47F27C0101E00C8C3A5 /* CustomShapesExamp.swift in Sources */,
 				7122CD4127E1B172007F1668 /* ViewBuilderExamp.swift in Sources */,
 				71BCA08927AC2A6B0084F33B /* ButtonStyleExamp.swift in Sources */,
 				71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */,
 				71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */,
+				7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */,
 				71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */,
+				7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
