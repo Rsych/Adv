@@ -11,7 +11,8 @@ import SwiftUI
 struct AdvApp: App {
     var body: some Scene {
         WindowGroup {
-            AnyTransitionExamp()
+//            AnyTransitionExamp()
+            AppNavBarView()
         }
     }
 }

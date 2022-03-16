@@ -12,6 +12,12 @@
 		7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4227E1BAE6007F1668 /* PreferenceKeyExamp.swift */; };
 		7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4527E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift */; };
 		7122CD4827E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4727E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift */; };
+		7122CD4B27E1C3CA007F1668 /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4A27E1C3CA007F1668 /* AppNavBarView.swift */; };
+		7122CD4D27E1C4D9007F1668 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4C27E1C4D9007F1668 /* CustomNavBarView.swift */; };
+		7122CD4F27E1C68E007F1668 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD4E27E1C68E007F1668 /* CustomNavBarContainerView.swift */; };
+		7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5027E1C7C4007F1668 /* CustomNavView.swift */; };
+		7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */; };
+		7122CD5527E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */; };
 		71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07827AC27CF0084F33B /* AdvApp.swift */; };
 		71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07A27AC27CF0084F33B /* ContentView.swift */; };
 		71BCA07D27AC27D00084F33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BCA07C27AC27D00084F33B /* Assets.xcassets */; };
@@ -29,6 +35,12 @@
 		7122CD4227E1BAE6007F1668 /* PreferenceKeyExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyExamp.swift; sourceTree = "<group>"; };
 		7122CD4527E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyExamp.swift; sourceTree = "<group>"; };
 		7122CD4727E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyExamp.swift; sourceTree = "<group>"; };
+		7122CD4A27E1C3CA007F1668 /* AppNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBarView.swift; sourceTree = "<group>"; };
+		7122CD4C27E1C4D9007F1668 /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
+		7122CD4E27E1C68E007F1668 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
+		7122CD5027E1C7C4007F1668 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
+		7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKey.swift; sourceTree = "<group>"; };
 		71BCA07527AC27CF0084F33B /* Adv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BCA07827AC27CF0084F33B /* AdvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvApp.swift; sourceTree = "<group>"; };
 		71BCA07A27AC27CF0084F33B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +74,19 @@
 			path = PreferenceKeyADV;
 			sourceTree = "<group>";
 		};
+		7122CD4927E1C3B9007F1668 /* CustomNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				7122CD4A27E1C3CA007F1668 /* AppNavBarView.swift */,
+				7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */,
+				7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */,
+				7122CD5027E1C7C4007F1668 /* CustomNavView.swift */,
+				7122CD4C27E1C4D9007F1668 /* CustomNavBarView.swift */,
+				7122CD4E27E1C68E007F1668 /* CustomNavBarContainerView.swift */,
+			);
+			path = CustomNavBar;
+			sourceTree = "<group>";
+		};
 		71BCA06C27AC27CF0084F33B = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +116,7 @@
 				7122CD3E27E1ADB5007F1668 /* GenericsExamp.swift */,
 				7122CD4027E1B172007F1668 /* ViewBuilderExamp.swift */,
 				7122CD4427E1BD84007F1668 /* PreferenceKeyADV */,
+				7122CD4927E1C3B9007F1668 /* CustomNavBar */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -176,17 +202,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */,
+				7122CD4B27E1C3CA007F1668 /* AppNavBarView.swift in Sources */,
 				7122CD3F27E1ADB5007F1668 /* GenericsExamp.swift in Sources */,
+				7122CD5527E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift in Sources */,
 				71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */,
 				7122CD4827E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift in Sources */,
 				71FAA47F27C0101E00C8C3A5 /* CustomShapesExamp.swift in Sources */,
 				7122CD4127E1B172007F1668 /* ViewBuilderExamp.swift in Sources */,
 				71BCA08927AC2A6B0084F33B /* ButtonStyleExamp.swift in Sources */,
 				71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */,
+				7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */,
 				71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */,
 				7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */,
+				7122CD4F27E1C68E007F1668 /* CustomNavBarContainerView.swift in Sources */,
+				7122CD4D27E1C4D9007F1668 /* CustomNavBarView.swift in Sources */,
 				71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */,
 				7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */,
+				7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
