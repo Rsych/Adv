@@ -18,6 +18,8 @@
 		7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5027E1C7C4007F1668 /* CustomNavView.swift */; };
 		7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */; };
 		7122CD5527E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */; };
+		717F772D27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */; };
+		71A6EC6827E1D0F0007151C6 /* UIViewRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */; };
 		71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07827AC27CF0084F33B /* AdvApp.swift */; };
 		71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07A27AC27CF0084F33B /* ContentView.swift */; };
 		71BCA07D27AC27D00084F33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BCA07C27AC27D00084F33B /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		7122CD5027E1C7C4007F1668 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKey.swift; sourceTree = "<group>"; };
+		717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableExamp.swift; sourceTree = "<group>"; };
+		71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableExamp.swift; sourceTree = "<group>"; };
 		71BCA07527AC27CF0084F33B /* Adv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BCA07827AC27CF0084F33B /* AdvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvApp.swift; sourceTree = "<group>"; };
 		71BCA07A27AC27CF0084F33B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				7122CD4027E1B172007F1668 /* ViewBuilderExamp.swift */,
 				7122CD4427E1BD84007F1668 /* PreferenceKeyADV */,
 				7122CD4927E1C3B9007F1668 /* CustomNavBar */,
+				71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */,
+				717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -204,6 +210,7 @@
 				71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */,
 				7122CD4B27E1C3CA007F1668 /* AppNavBarView.swift in Sources */,
 				7122CD3F27E1ADB5007F1668 /* GenericsExamp.swift in Sources */,
+				71A6EC6827E1D0F0007151C6 /* UIViewRepresentableExamp.swift in Sources */,
 				7122CD5527E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift in Sources */,
 				71BCA08727AC28000084F33B /* ViewModifierExamp.swift in Sources */,
 				7122CD4827E1BF1E007F1668 /* ScrollViewOffsetPreferenceKeyExamp.swift in Sources */,
@@ -219,6 +226,7 @@
 				71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */,
 				7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */,
 				7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */,
+				717F772D27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
