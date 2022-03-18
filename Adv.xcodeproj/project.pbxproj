@@ -19,6 +19,7 @@
 		7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */; };
 		7122CD5527E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */; };
 		717F772D27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */; };
+		717F773127E3052300336BA9 /* ProtocolExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773027E3052300336BA9 /* ProtocolExamp.swift */; };
 		71A6EC6827E1D0F0007151C6 /* UIViewRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */; };
 		71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07827AC27CF0084F33B /* AdvApp.swift */; };
 		71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07A27AC27CF0084F33B /* ContentView.swift */; };
@@ -44,6 +45,7 @@
 		7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKey.swift; sourceTree = "<group>"; };
 		717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableExamp.swift; sourceTree = "<group>"; };
+		717F773027E3052300336BA9 /* ProtocolExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExamp.swift; sourceTree = "<group>"; };
 		71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableExamp.swift; sourceTree = "<group>"; };
 		71BCA07527AC27CF0084F33B /* Adv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BCA07827AC27CF0084F33B /* AdvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvApp.swift; sourceTree = "<group>"; };
@@ -91,6 +93,15 @@
 			path = CustomNavBar;
 			sourceTree = "<group>";
 		};
+		717F772F27E3049B00336BA9 /* UIKit in SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */,
+				717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */,
+			);
+			path = "UIKit in SwiftUI";
+			sourceTree = "<group>";
+		};
 		71BCA06C27AC27CF0084F33B = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +132,8 @@
 				7122CD4027E1B172007F1668 /* ViewBuilderExamp.swift */,
 				7122CD4427E1BD84007F1668 /* PreferenceKeyADV */,
 				7122CD4927E1C3B9007F1668 /* CustomNavBar */,
-				71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */,
-				717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */,
+				717F772F27E3049B00336BA9 /* UIKit in SwiftUI */,
+				717F773027E3052300336BA9 /* ProtocolExamp.swift */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -223,6 +234,7 @@
 				7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */,
 				7122CD4F27E1C68E007F1668 /* CustomNavBarContainerView.swift in Sources */,
 				7122CD4D27E1C4D9007F1668 /* CustomNavBarView.swift in Sources */,
+				717F773127E3052300336BA9 /* ProtocolExamp.swift in Sources */,
 				71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */,
 				7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */,
 				7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */,
