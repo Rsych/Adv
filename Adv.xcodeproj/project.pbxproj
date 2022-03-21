@@ -21,6 +21,10 @@
 		717F772D27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */; };
 		717F773127E3052300336BA9 /* ProtocolExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773027E3052300336BA9 /* ProtocolExamp.swift */; };
 		717F773327E76CFA00336BA9 /* DependencyInjectionExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */; };
+		717F773627E8B11C00336BA9 /* UnitTestingExampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773527E8B11C00336BA9 /* UnitTestingExampView.swift */; };
+		717F773827E8B3F400336BA9 /* UnitTestingExampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773727E8B3F400336BA9 /* UnitTestingExampViewModel.swift */; };
+		717F774027E8B47800336BA9 /* Adv_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773F27E8B47800336BA9 /* Adv_Tests.swift */; };
+		717F774727E8B4BB00336BA9 /* UnitTestingExampViewModel_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F774627E8B4BB00336BA9 /* UnitTestingExampViewModel_Test.swift */; };
 		71A6EC6827E1D0F0007151C6 /* UIViewRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */; };
 		71BCA07927AC27CF0084F33B /* AdvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07827AC27CF0084F33B /* AdvApp.swift */; };
 		71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA07A27AC27CF0084F33B /* ContentView.swift */; };
@@ -32,6 +36,16 @@
 		71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAA47C27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift */; };
 		71FAA47F27C0101E00C8C3A5 /* CustomShapesExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAA47E27C0101E00C8C3A5 /* CustomShapesExamp.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		717F774127E8B47800336BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71BCA06D27AC27CF0084F33B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71BCA07427AC27CF0084F33B;
+			remoteInfo = Adv;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7122CD3E27E1ADB5007F1668 /* GenericsExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsExamp.swift; sourceTree = "<group>"; };
@@ -48,6 +62,11 @@
 		717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableExamp.swift; sourceTree = "<group>"; };
 		717F773027E3052300336BA9 /* ProtocolExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExamp.swift; sourceTree = "<group>"; };
 		717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionExamp.swift; sourceTree = "<group>"; };
+		717F773527E8B11C00336BA9 /* UnitTestingExampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingExampView.swift; sourceTree = "<group>"; };
+		717F773727E8B3F400336BA9 /* UnitTestingExampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingExampViewModel.swift; sourceTree = "<group>"; };
+		717F773D27E8B47800336BA9 /* Adv_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Adv_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		717F773F27E8B47800336BA9 /* Adv_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adv_Tests.swift; sourceTree = "<group>"; };
+		717F774627E8B4BB00336BA9 /* UnitTestingExampViewModel_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingExampViewModel_Test.swift; sourceTree = "<group>"; };
 		71A6EC6727E1D0F0007151C6 /* UIViewRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableExamp.swift; sourceTree = "<group>"; };
 		71BCA07527AC27CF0084F33B /* Adv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BCA07827AC27CF0084F33B /* AdvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvApp.swift; sourceTree = "<group>"; };
@@ -62,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		717F773A27E8B47800336BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71BCA07227AC27CF0084F33B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,10 +130,29 @@
 			path = "UIKit in SwiftUI";
 			sourceTree = "<group>";
 		};
+		717F773427E8B10C00336BA9 /* UnitTesting */ = {
+			isa = PBXGroup;
+			children = (
+				717F773527E8B11C00336BA9 /* UnitTestingExampView.swift */,
+				717F773727E8B3F400336BA9 /* UnitTestingExampViewModel.swift */,
+			);
+			path = UnitTesting;
+			sourceTree = "<group>";
+		};
+		717F773E27E8B47800336BA9 /* Adv_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				717F773F27E8B47800336BA9 /* Adv_Tests.swift */,
+				717F774627E8B4BB00336BA9 /* UnitTestingExampViewModel_Test.swift */,
+			);
+			path = Adv_Tests;
+			sourceTree = "<group>";
+		};
 		71BCA06C27AC27CF0084F33B = {
 			isa = PBXGroup;
 			children = (
 				71BCA07727AC27CF0084F33B /* Adv */,
+				717F773E27E8B47800336BA9 /* Adv_Tests */,
 				71BCA07627AC27CF0084F33B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				71BCA07527AC27CF0084F33B /* Adv.app */,
+				717F773D27E8B47800336BA9 /* Adv_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +183,7 @@
 				717F772F27E3049B00336BA9 /* UIKit in SwiftUI */,
 				717F773027E3052300336BA9 /* ProtocolExamp.swift */,
 				717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */,
+				717F773427E8B10C00336BA9 /* UnitTesting */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -154,6 +201,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		717F773C27E8B47800336BA9 /* Adv_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 717F774327E8B47800336BA9 /* Build configuration list for PBXNativeTarget "Adv_Tests" */;
+			buildPhases = (
+				717F773927E8B47800336BA9 /* Sources */,
+				717F773A27E8B47800336BA9 /* Frameworks */,
+				717F773B27E8B47800336BA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				717F774227E8B47800336BA9 /* PBXTargetDependency */,
+			);
+			name = Adv_Tests;
+			productName = Adv_Tests;
+			productReference = 717F773D27E8B47800336BA9 /* Adv_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		71BCA07427AC27CF0084F33B /* Adv */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71BCA08327AC27D00084F33B /* Build configuration list for PBXNativeTarget "Adv" */;
@@ -178,9 +243,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					717F773C27E8B47800336BA9 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 71BCA07427AC27CF0084F33B;
+					};
 					71BCA07427AC27CF0084F33B = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -200,11 +269,19 @@
 			projectRoot = "";
 			targets = (
 				71BCA07427AC27CF0084F33B /* Adv */,
+				717F773C27E8B47800336BA9 /* Adv_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		717F773B27E8B47800336BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71BCA07327AC27CF0084F33B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +294,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		717F773927E8B47800336BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				717F774027E8B47800336BA9 /* Adv_Tests.swift in Sources */,
+				717F774727E8B4BB00336BA9 /* UnitTestingExampViewModel_Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71BCA07127AC27CF0084F33B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +320,7 @@
 				71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */,
 				7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */,
 				71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */,
+				717F773627E8B11C00336BA9 /* UnitTestingExampView.swift in Sources */,
 				7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */,
 				7122CD4F27E1C68E007F1668 /* CustomNavBarContainerView.swift in Sources */,
 				7122CD4D27E1C4D9007F1668 /* CustomNavBarView.swift in Sources */,
@@ -243,12 +330,59 @@
 				7122CD4627E1BD9B007F1668 /* GeometryPreferenceKeyExamp.swift in Sources */,
 				7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */,
 				717F772D27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift in Sources */,
+				717F773827E8B3F400336BA9 /* UnitTestingExampViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		717F774227E8B47800336BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71BCA07427AC27CF0084F33B /* Adv */;
+			targetProxy = 717F774127E8B47800336BA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		717F774427E8B47800336BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G6V85GALCN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.naolin.Adv-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Adv.app/Adv";
+			};
+			name = Debug;
+		};
+		717F774527E8B47800336BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G6V85GALCN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.naolin.Adv-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Adv.app/Adv";
+			};
+			name = Release;
+		};
 		71BCA08127AC27D00084F33B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		717F774327E8B47800336BA9 /* Build configuration list for PBXNativeTarget "Adv_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				717F774427E8B47800336BA9 /* Debug */,
+				717F774527E8B47800336BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		71BCA07027AC27CF0084F33B /* Build configuration list for PBXProject "Adv" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
