@@ -46,4 +46,28 @@ class UnitTestingExampViewModel_Test: XCTestCase {
             XCTAssertEqual(vm.isPremium, userIsPremium)
         }
     }
+    
+    func test_UnitTestingExampViewModel_dataArray_shouldBeEmpty() {
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        XCTAssertTrue(vm.dataArray.isEmpty)
+    }
+    
+    func test_UnitTestingExampViewModel_dataArray_shouldAddItems() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        vm.addItem(item: "Hello")
+        
+        XCTAssertFalse(vm.dataArray.isEmpty)
+    }
+    
+    func test_UnitTestingExampViewModel_dataArray_shouldNotAddBlankString() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        vm.addItem(item: "")
+        
+        XCTAssertTrue(vm.dataArray.isEmpty)
+    }
 }
