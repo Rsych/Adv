@@ -13,15 +13,15 @@ import XCTest
 // Testing Structure: Given, When, Then
 
 class UnitTestingExampViewModel_Test: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func test_UnitTestingExampViewModel_isPremium_shouldBeTrue() {
         // Given
         let userIsPremium: Bool = true
@@ -30,7 +30,7 @@ class UnitTestingExampViewModel_Test: XCTestCase {
         // Then
         XCTAssertTrue(vm.isPremium, "It should be true")
     }
-
+    
     func test_UnitTestingExampViewModel_isPremium_shouldBeInjectedValue() {
         let userIsPremium: Bool = Bool.random()
         let vm = UnitTestingExampViewModel(isPremium: userIsPremium)
@@ -57,9 +57,13 @@ class UnitTestingExampViewModel_Test: XCTestCase {
         
         let vm = UnitTestingExampViewModel(isPremium: Bool.random())
         
-        vm.addItem(item: "Hello")
+        let loopCount: Int = Int.random(in: 1..<100)
         
-        XCTAssertFalse(vm.dataArray.isEmpty)
+        for _ in 0..<loopCount {
+            // Better use random string instead uuidString
+            vm.addItem(item: UUID().uuidString)
+        }
+        XCTAssertEqual(vm.dataArray.count, loopCount)
     }
     
     func test_UnitTestingExampViewModel_dataArray_shouldNotAddBlankString() {
@@ -70,4 +74,62 @@ class UnitTestingExampViewModel_Test: XCTestCase {
         
         XCTAssertTrue(vm.dataArray.isEmpty)
     }
+    
+    func test_UnitTestingExampViewModel_selectedItem_shouldStartNil() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        XCTAssertNil(vm.selectedItem)
+    }
+    
+    func test_UnitTestingExampViewModel_selectedItem_shouldBeNilWhenSelectingInvalidItem() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        // Select valid item
+        let newItem = UUID().uuidString
+        vm.addItem(item: newItem)
+        vm.selectedItem(item: newItem)
+        
+        
+        // Select invalid item
+        vm.selectedItem(item: UUID().uuidString)
+        
+        XCTAssertNil(vm.selectedItem)
+    }
+    
+    func test_UnitTestingExampViewModel_selectedItem_shouldBeSelected() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        let newItem = UUID().uuidString
+        
+        vm.addItem(item: newItem)
+        vm.selectedItem(item: newItem)
+        
+        XCTAssertNotNil(vm.selectedItem)
+        XCTAssertEqual(vm.selectedItem, newItem)
+    }
+    
+    func test_UnitTestingExampViewModel_selectedItem_shouldBeSelected_stress() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        let loopCount: Int = Int.random(in: 1..<100)
+        var itemsArray: [String] = []
+        
+        for _ in 0..<loopCount {
+            let newItem = UUID().uuidString
+            vm.addItem(item: newItem)
+            itemsArray.append(newItem)
+        }
+        
+        let randomItem = itemsArray.randomElement() ?? ""
+        vm.selectedItem(item: randomItem)
+        
+        XCTAssertNotNil(vm.selectedItem)
+        XCTAssertEqual(vm.selectedItem, randomItem)
+    }
+    
+    
 }
