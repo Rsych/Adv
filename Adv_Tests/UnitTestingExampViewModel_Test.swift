@@ -131,5 +131,15 @@ class UnitTestingExampViewModel_Test: XCTestCase {
         XCTAssertEqual(vm.selectedItem, randomItem)
     }
     
-    
+    func test_UnitTestingExampViewModel_saveItem_shouldThrowError_noData() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        XCTAssertThrowsError(try vm.saveItem(item: UUID().uuidString))
+        
+        XCTAssertThrowsError(try vm.saveItem(item: UUID().uuidString), "Should throw Item Not Found error!") { error in
+            let returnedError = error as? UnitTestingExampViewModel.DataError
+            XCTAssertEqual(returnedError, UnitTestingExampViewModel.DataError.itemNotFound)
+        }
+    }
 }
