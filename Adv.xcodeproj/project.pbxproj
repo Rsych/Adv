@@ -35,6 +35,7 @@
 		71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCA09727AC5F010084F33B /* AnyTransitionExamp.swift */; };
 		71F54A5D27ED904800B3E00F /* NewTestDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F54A5C27ED904800B3E00F /* NewTestDataService.swift */; };
 		71F54A5F27ED907800B3E00F /* NewTestDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F54A5E27ED907800B3E00F /* NewTestDataService_Tests.swift */; };
+		71F54A6127ED94F600B3E00F /* AdvCombineExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F54A6027ED94F600B3E00F /* AdvCombineExamp.swift */; };
 		71FAA47D27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAA47C27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift */; };
 		71FAA47F27C0101E00C8C3A5 /* CustomShapesExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAA47E27C0101E00C8C3A5 /* CustomShapesExamp.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		71BCA09727AC5F010084F33B /* AnyTransitionExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionExamp.swift; sourceTree = "<group>"; };
 		71F54A5C27ED904800B3E00F /* NewTestDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestDataService.swift; sourceTree = "<group>"; };
 		71F54A5E27ED907800B3E00F /* NewTestDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestDataService_Tests.swift; sourceTree = "<group>"; };
+		71F54A6027ED94F600B3E00F /* AdvCombineExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvCombineExamp.swift; sourceTree = "<group>"; };
 		71FAA47C27BEE18200C8C3A5 /* MatchedGeometryEffectExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectExamp.swift; sourceTree = "<group>"; };
 		71FAA47E27C0101E00C8C3A5 /* CustomShapesExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesExamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 				717F773027E3052300336BA9 /* ProtocolExamp.swift */,
 				717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */,
 				717F773427E8B10C00336BA9 /* UnitTesting */,
+				71F54A6027ED94F600B3E00F /* AdvCombineExamp.swift */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -329,6 +332,7 @@
 				7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */,
 				71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */,
 				717F773627E8B11C00336BA9 /* UnitTestingExampView.swift in Sources */,
+				71F54A6127ED94F600B3E00F /* AdvCombineExamp.swift in Sources */,
 				7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */,
 				7122CD4F27E1C68E007F1668 /* CustomNavBarContainerView.swift in Sources */,
 				7122CD4D27E1C4D9007F1668 /* CustomNavBarView.swift in Sources */,
