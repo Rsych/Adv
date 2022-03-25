@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Combine
 @testable import Adv
 
 // Naming Structure: test_UnitOfWork_StateUnderTest_ExpectedBehavior
@@ -14,12 +15,16 @@ import XCTest
 
 class UnitTestingExampViewModel_Test: XCTestCase {
     
+    var viewModel: UnitTestingExampViewModel?
+    var cancellables = Set<AnyCancellable>()
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewModel = UnitTestingExampViewModel(isPremium: Bool.random())
     }
     
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
     }
     
     func test_UnitTestingExampViewModel_isPremium_shouldBeTrue() {
@@ -48,14 +53,20 @@ class UnitTestingExampViewModel_Test: XCTestCase {
     }
     
     func test_UnitTestingExampViewModel_dataArray_shouldBeEmpty() {
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         XCTAssertTrue(vm.dataArray.isEmpty)
     }
     
     func test_UnitTestingExampViewModel_dataArray_shouldAddItems() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         let loopCount: Int = Int.random(in: 1..<100)
         
@@ -68,7 +79,10 @@ class UnitTestingExampViewModel_Test: XCTestCase {
     
     func test_UnitTestingExampViewModel_dataArray_shouldNotAddBlankString() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         vm.addItem(item: "")
         
@@ -77,14 +91,20 @@ class UnitTestingExampViewModel_Test: XCTestCase {
     
     func test_UnitTestingExampViewModel_selectedItem_shouldStartNil() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         XCTAssertNil(vm.selectedItem)
     }
     
     func test_UnitTestingExampViewModel_selectedItem_shouldBeNilWhenSelectingInvalidItem() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         // Select valid item
         let newItem = UUID().uuidString
@@ -100,7 +120,10 @@ class UnitTestingExampViewModel_Test: XCTestCase {
     
     func test_UnitTestingExampViewModel_selectedItem_shouldBeSelected() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         let newItem = UUID().uuidString
         
@@ -113,7 +136,10 @@ class UnitTestingExampViewModel_Test: XCTestCase {
     
     func test_UnitTestingExampViewModel_selectedItem_shouldBeSelected_stress() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         let loopCount: Int = Int.random(in: 1..<100)
         var itemsArray: [String] = []
@@ -125,6 +151,7 @@ class UnitTestingExampViewModel_Test: XCTestCase {
         }
         
         let randomItem = itemsArray.randomElement() ?? ""
+        XCTAssertFalse(randomItem.isEmpty)
         vm.selectedItem(item: randomItem)
         
         XCTAssertNotNil(vm.selectedItem)
@@ -133,7 +160,10 @@ class UnitTestingExampViewModel_Test: XCTestCase {
     
     func test_UnitTestingExampViewModel_saveItem_shouldThrowError_noData() {
         
-        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        guard let vm = viewModel else {
+            XCTFail()
+            return
+        }
         
         XCTAssertThrowsError(try vm.saveItem(item: UUID().uuidString))
         
@@ -141,5 +171,82 @@ class UnitTestingExampViewModel_Test: XCTestCase {
             let returnedError = error as? UnitTestingExampViewModel.DataError
             XCTAssertEqual(returnedError, UnitTestingExampViewModel.DataError.itemNotFound)
         }
+    }
+    
+    func test_UnitTestingExampViewModel_saveItem_shouldThrowError_noDataArray() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        let loopCount = Int.random(in: 1..<100)
+        for _ in 0..<loopCount {
+            vm.addItem(item: UUID().uuidString)
+        }
+        
+        do {
+            try vm.saveItem(item: "")
+        } catch let error {
+            let returnedError = error as? UnitTestingExampViewModel.DataError
+            XCTAssertEqual(returnedError, UnitTestingExampViewModel.DataError.noData)
+        }
+    }
+    
+    func test_UnitTestingExampViewModel_saveItem_shouldSaveItem() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        let loopCount: Int = Int.random(in: 1..<100)
+        var itemsArray: [String] = []
+        
+        for _ in 0..<loopCount {
+            let newItem = UUID().uuidString
+            vm.addItem(item: newItem)
+            itemsArray.append(newItem)
+        }
+        let randomItem = itemsArray.randomElement() ?? ""
+        XCTAssertFalse(randomItem.isEmpty)
+        
+        XCTAssertNoThrow(try vm.saveItem(item: randomItem))
+        
+        do {
+            try vm.saveItem(item: randomItem)
+        } catch {
+            XCTFail()
+        }
+    }
+    
+    func test_UnitTestingExampViewModel_downloadWithEscaping_shouldReturnItems() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        let expectation = XCTestExpectation(description: "Should return items after 3seconds.")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        vm.downloadWithEscaping()
+        
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingExampViewModel_downloadWithCombine_shouldReturnItems() {
+        
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random())
+        
+        let expectation = XCTestExpectation(description: "Should return items after 3seconds.")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        vm.downloadItemsWithCombine()
+        
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
     }
 }
