@@ -249,4 +249,26 @@ class UnitTestingExampViewModel_Test: XCTestCase {
         wait(for: [expectation], timeout: 5)
         XCTAssertGreaterThan(vm.dataArray.count, 0)
     }
+    
+    func test_UnitTestingExampViewModel_downloadWithCombine_shouldReturnItems2() {
+        
+        let items = [UUID().uuidString, UUID().uuidString, UUID().uuidString, UUID().uuidString, UUID().uuidString]
+        let dataService: NewDataServiceProtocol = NewTestDataService(items: items)
+        let vm = UnitTestingExampViewModel(isPremium: Bool.random(), dataService: dataService)
+        
+        let expectation = XCTestExpectation(description: "Should return items after 3seconds.")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        vm.downloadItemsWithCombine()
+        
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+        XCTAssertEqual(vm.dataArray.count, items.count)
+    }
 }
