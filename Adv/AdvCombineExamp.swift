@@ -20,7 +20,7 @@ class AdvCombineDataService {
     
     private func publishFakeData() {
 //        let items = ["One", "Two", "Three"]
-        let items: [Int] = Array(1..<11)
+        let items: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         
         for i in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
@@ -84,6 +84,17 @@ class AdvCombineExampViewModel: ObservableObject {
 //            .tryPrefix(while: <#T##(Int) throws -> Bool#>)
 //            .output(at: 4)
 //            .output(in: 2..<4)
+        */
+        // Mathematic Operations
+        /*
+//            .max()
+//            .max(by: { int1, int2 in
+//                return int1 < int2
+//            })
+//            .max(by: { $0 < $1 })
+//            .tryMax(by: )
+//            .min()
+//            .tryMin(by: )
         */
         
             .map({ String($0) })
