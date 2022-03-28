@@ -10,18 +10,27 @@ import Combine
 
 class AdvCombineDataService {
 //    @Published var basicPublisher: [String] = []
-    @Published var basicPublisher: String = ""
+//    @Published var basicPublisher: String = "first publish"
+//    let currentValuePublisher = CurrentValueSubject<String, Error>("first publish")
+    let passThroughPublisher = PassthroughSubject<Int, Error>()
     
     init() {
         publishFakeData()
     }
     
     private func publishFakeData() {
-        let items = ["One", "Two", "Three"]
+//        let items = ["One", "Two", "Three"]
+        let items: [Int] = Array(1..<11)
         
         for i in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
-                self.basicPublisher = items[i]
+//                self.basicPublisher = items[i]
+//                self.currentValuePublisher.send(items[i])
+                self.passThroughPublisher.send(items[i])
+                
+                if i == items.indices.last {
+                    self.passThroughPublisher.send(completion: .finished)
+                }
             }
         }
     }
@@ -29,6 +38,7 @@ class AdvCombineDataService {
 
 class AdvCombineExampViewModel: ObservableObject {
     @Published var data: [String] = []
+    @Published var error: String = ""
     
     let dataService: AdvCombineDataService
     var cancellable = Set<AnyCancellable>()
@@ -39,12 +49,50 @@ class AdvCombineExampViewModel: ObservableObject {
     }
     
     private func addSubscribers() {
-        dataService.$basicPublisher
+        dataService.passThroughPublisher
+        
+        // Sequence Operations
+        /*
+//            .first()
+//            .first(where: { $0 > 4 })
+//            .tryFirst(where: { int in
+//                if int == 3 {
+//                    throw URLError(.badServerResponse)
+//                }
+//
+//                return int > 1
+//            })
+//            .last()
+//            .last(where: { $0 < 4 })
+//            .tryLast(where: { int in
+//                if int == 3 {
+//                    throw URLError(.badServerResponse)
+//                }
+//                return int > 1
+//            })
+//            .dropFirst()
+//            .dropFirst(3)
+//            .drop(while: { $0 < 5})
+//            .tryDrop(while: { int in
+//                if int == 5 {
+//                    throw URLError(.badServerResponse)
+//                }
+//                return int < 6
+//            })
+//            .prefix(4)
+//            .prefix(while: { $0 < 5 })
+//            .tryPrefix(while: <#T##(Int) throws -> Bool#>)
+//            .output(at: 4)
+//            .output(in: 2..<4)
+        */
+        
+            .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
+                    self.error = "Error: \(error)"
                     print("Error: \(error.localizedDescription)")
                 }
             } receiveValue: { [weak self] returnedValue in
@@ -67,6 +115,10 @@ struct AdvCombineExamp: View {
                     Text(item)
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                }
+                
+                if !vm.error.isEmpty {
+                    Text(vm.error)
                 }
             }
         }
