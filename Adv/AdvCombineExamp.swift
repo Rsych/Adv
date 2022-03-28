@@ -33,6 +33,15 @@ class AdvCombineDataService {
                 }
             }
         }
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+        //            self.passThroughPublisher.send(1)
+        //        }
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        //            self.passThroughPublisher.send(2)
+        //        }
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        //            self.passThroughPublisher.send(3)
+        //        }
     }
 }
 
@@ -98,46 +107,58 @@ class AdvCombineExampViewModel: ObservableObject {
          */
         // Filter / Reducing Operations
         /*
-        //            .map({ String($0) })
-        //            .tryMap({ int in
-        //                if int == 5 {
-        //                    throw URLError(.badServerResponse)
-        //                }
-        //                return String(int)
-        //            })
-        //            .compactMap({ int in
-        //                if int == 5 {
-        //                    return nil
-        //                }
-        //                return String(int)
-        //            })
-        //            .tryCompactMap(<#T##transform: (Int) throws -> T?##(Int) throws -> T?#>)
-        
-        //            .filter({ ($0 > 3) && ($0 < 7) })
-        //            .tryFilter(<#T##isIncluded: (Int) throws -> Bool##(Int) throws -> Bool#>)
-        //            .removeDuplicates() // It has to be duplicates back to back like 4, 4. Not gonna work 4, 5, 4
-        //            .removeDuplicates(by: { int1, int2 in
-        //                return int1 == int2
-        //            })
-        //            .tryRemoveDuplicates(by: <#T##(Int, Int) throws -> Bool#>)
-        //            .replaceNil(with: 5)
-        //            .replaceEmpty(with: [])
-        //            .replaceError(with: "Default Value")
-        //            .scan(0, { existingValue, newValue in
-        //                return existingValue + newValue
-        //            })
-        //            .scan(0) { $0 + $1 }
-        //            .scan(0, +)
-        //            .tryScan(<#T##initialResult: T##T#>, <#T##nextPartialResult: (T, Int) throws -> T##(T, Int) throws -> T#>)
-        
-        //            .reduce(0, { existingValue, newValue in
-        //                return existingValue + newValue
-        //            }) // print 55
-        //            .map({ String($0) })
-        //            .collect() // collects and publish at once, instead having loading, shows at once
-        //            .collect(3) // collects and publish at batch of 3
-//            .allSatisfy({ $0 < 50 })
-//            .tryAllSatisfy(<#T##predicate: (Int) throws -> Bool##(Int) throws -> Bool#>)
+         //            .map({ String($0) })
+         //            .tryMap({ int in
+         //                if int == 5 {
+         //                    throw URLError(.badServerResponse)
+         //                }
+         //                return String(int)
+         //            })
+         //            .compactMap({ int in
+         //                if int == 5 {
+         //                    return nil
+         //                }
+         //                return String(int)
+         //            })
+         //            .tryCompactMap(<#T##transform: (Int) throws -> T?##(Int) throws -> T?#>)
+         
+         //            .filter({ ($0 > 3) && ($0 < 7) })
+         //            .tryFilter(<#T##isIncluded: (Int) throws -> Bool##(Int) throws -> Bool#>)
+         //            .removeDuplicates() // It has to be duplicates back to back like 4, 4. Not gonna work 4, 5, 4
+         //            .removeDuplicates(by: { int1, int2 in
+         //                return int1 == int2
+         //            })
+         //            .tryRemoveDuplicates(by: <#T##(Int, Int) throws -> Bool#>)
+         //            .replaceNil(with: 5)
+         //            .replaceEmpty(with: [])
+         //            .replaceError(with: "Default Value")
+         //            .scan(0, { existingValue, newValue in
+         //                return existingValue + newValue
+         //            })
+         //            .scan(0) { $0 + $1 }
+         //            .scan(0, +)
+         //            .tryScan(<#T##initialResult: T##T#>, <#T##nextPartialResult: (T, Int) throws -> T##(T, Int) throws -> T#>)
+         
+         //            .reduce(0, { existingValue, newValue in
+         //                return existingValue + newValue
+         //            }) // print 55
+         //            .map({ String($0) })
+         //            .collect() // collects and publish at once, instead having loading, shows at once
+         //            .collect(3) // collects and publish at batch of 3
+         //            .allSatisfy({ $0 < 50 })
+         //            .tryAllSatisfy(<#T##predicate: (Int) throws -> Bool##(Int) throws -> Bool#>)
+         */
+        // Timing Operations
+        /*
+        //            .debounce(for: 0.75, scheduler: DispatchQueue.main) // waits for 0.75 to see if there's publish, useful for textfield
+//            .delay(for: 2, scheduler: DispatchQueue.main)
+//            .measureInterval(using: DispatchQueue.main)
+//            .map({ stride in
+//                return "\(stride.timeInterval)"
+//            })
+//            .throttle(for: 3, scheduler: DispatchQueue.main, latest: true) // wait for some seconds and show latest or first
+//            .retry(3)
+            .timeout(0.75, scheduler: DispatchQueue.main) // terminates publish if time interval is more than 0.75
         */
         
             .map({ String($0) })
