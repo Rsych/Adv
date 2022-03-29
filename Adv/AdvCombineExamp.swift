@@ -56,6 +56,7 @@ class AdvCombineDataService {
 
 class AdvCombineExampViewModel: ObservableObject {
     @Published var data: [String] = []
+    @Published var dataBools: [Bool] = []
     @Published var error: String = ""
     
     let dataService: AdvCombineDataService
@@ -67,7 +68,7 @@ class AdvCombineExampViewModel: ObservableObject {
     }
     
     private func addSubscribers() {
-        dataService.passThroughPublisher
+        //        dataService.passThroughPublisher
         
         // Sequence Operations
         /*
@@ -206,6 +207,12 @@ class AdvCombineExampViewModel: ObservableObject {
          //            })
          */
         
+        let sharedPublisher = dataService.passThroughPublisher
+            .dropFirst(3)
+            .share()
+        
+//        dataService.passThroughPublisher
+        sharedPublisher
             .map({ String($0) })
             .sink { completion in
                 switch completion {
@@ -221,6 +228,24 @@ class AdvCombineExampViewModel: ObservableObject {
                 self?.data.append(returnedValue)
             }
             .store(in: &cancellable)
+        
+//        dataService.passThroughPublisher
+        sharedPublisher
+            .map({ $0 > 5 ? true : false })
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    self.error = "Error: \(error)"
+                    print("Error: \(error.localizedDescription)")
+                }
+            } receiveValue: { [weak self] returnedValue in
+                //                self?.data = returnedValue
+                //                self?.data.append(contentsOf: returnedValue)
+                self?.dataBools.append(returnedValue)
+            }
+            .store(in: &cancellable)
     }
     
 }
@@ -232,15 +257,24 @@ struct AdvCombineExamp: View {
     }
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(vm.data, id: \.self) { item in
-                    Text(item)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+            HStack {
+                VStack {
+                    ForEach(vm.data, id: \.self) { item in
+                        Text(item)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                    }
+                    
+                    if !vm.error.isEmpty {
+                        Text(vm.error)
+                    }
                 }
-                
-                if !vm.error.isEmpty {
-                    Text(vm.error)
+                VStack {
+                    ForEach(vm.dataBools, id: \.self) {
+                        Text($0.description)
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                    }
                 }
             }
         }
