@@ -13,6 +13,8 @@ class AdvCombineDataService {
     //    @Published var basicPublisher: String = "first publish"
     //    let currentValuePublisher = CurrentValueSubject<String, Error>("first publish")
     let passThroughPublisher = PassthroughSubject<Int, Error>()
+    let boolPublisher = PassthroughSubject<Bool, Error>()
+    let intPublisher = PassthroughSubject<Int, Error>()
     
     init() {
         publishFakeData()
@@ -20,13 +22,20 @@ class AdvCombineDataService {
     
     private func publishFakeData() {
         //        let items = ["One", "Two", "Three"]
-        let items: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        let items: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         
         for i in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
                 //                self.basicPublisher = items[i]
                 //                self.currentValuePublisher.send(items[i])
                 self.passThroughPublisher.send(items[i])
+                
+                if (i > 4 && i < 8) {
+                    self.boolPublisher.send(true)
+                    self.intPublisher.send(999)
+                } else {
+                    self.boolPublisher.send(false)
+                }
                 
                 if i == items.indices.last {
                     self.passThroughPublisher.send(completion: .finished)
@@ -94,6 +103,7 @@ class AdvCombineExampViewModel: ObservableObject {
          //            .output(at: 4)
          //            .output(in: 2..<4)
          */
+        
         // Mathematic Operations
         /*
          //            .max()
@@ -105,6 +115,7 @@ class AdvCombineExampViewModel: ObservableObject {
          //            .min()
          //            .tryMin(by: )
          */
+        
         // Filter / Reducing Operations
         /*
          //            .map({ String($0) })
@@ -148,18 +159,52 @@ class AdvCombineExampViewModel: ObservableObject {
          //            .allSatisfy({ $0 < 50 })
          //            .tryAllSatisfy(<#T##predicate: (Int) throws -> Bool##(Int) throws -> Bool#>)
          */
+        
         // Timing Operations
         /*
-        //            .debounce(for: 0.75, scheduler: DispatchQueue.main) // waits for 0.75 to see if there's publish, useful for textfield
-//            .delay(for: 2, scheduler: DispatchQueue.main)
-//            .measureInterval(using: DispatchQueue.main)
-//            .map({ stride in
-//                return "\(stride.timeInterval)"
-//            })
-//            .throttle(for: 3, scheduler: DispatchQueue.main, latest: true) // wait for some seconds and show latest or first
-//            .retry(3)
-            .timeout(0.75, scheduler: DispatchQueue.main) // terminates publish if time interval is more than 0.75
-        */
+         //            .debounce(for: 0.75, scheduler: DispatchQueue.main) // waits for 0.75 to see if there's publish, useful for textfield
+         //            .delay(for: 2, scheduler: DispatchQueue.main)
+         //            .measureInterval(using: DispatchQueue.main)
+         //            .map({ stride in
+         //                return "\(stride.timeInterval)"
+         //            })
+         //            .throttle(for: 3, scheduler: DispatchQueue.main, latest: true) // wait for some seconds and show latest or first
+         //            .retry(3)
+         .timeout(0.75, scheduler: DispatchQueue.main) // terminates publish if time interval is more than 0.75
+         */
+        
+        // Multiple Publishers / Subscribers
+        /*
+         //            .combineLatest(dataService.boolPublisher, dataService.intPublisher)
+         //            .compactMap({ (int, bool) in
+         //                if bool {
+         //                    return String(int)
+         //                }
+         //                return nil
+         //            })
+         //            .compactMap({ $1 ? String($0) : "nil" })
+         //            .compactMap({ (int1, bool, int2) in
+         //                if bool {
+         //                    return String(int1)
+         //                }
+         //                return "n/a"
+         //            })
+         //            .merge(with: dataService.intPublisher)
+         //            .zip(dataService.boolPublisher, dataService.intPublisher)
+         //            .map({ tuple in
+         //                return String(tuple.0) + tuple.1.description + String(tuple.2)
+         //            })
+         
+         //            .tryMap({ int in
+         //                if int == 5 {
+         //                    throw URLError(.badServerResponse)
+         //                }
+         //                return int
+         //            })
+         //            .catch({ error in
+         //                return self.dataService.intPublisher
+         //            })
+         */
         
             .map({ String($0) })
             .sink { completion in
