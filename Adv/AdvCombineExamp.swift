@@ -61,6 +61,7 @@ class AdvCombineExampViewModel: ObservableObject {
     
     let dataService: AdvCombineDataService
     var cancellable = Set<AnyCancellable>()
+    let multiCastPublisher = PassthroughSubject<Int, Error>()
     
     init(dataService: AdvCombineDataService) {
         self.dataService = dataService
@@ -208,8 +209,12 @@ class AdvCombineExampViewModel: ObservableObject {
          */
         
         let sharedPublisher = dataService.passThroughPublisher
-            .dropFirst(3)
+//            .dropFirst(3)
             .share()
+//            .multicast {
+//                PassthroughSubject<Int, Error>()
+//            }
+            .multicast(subject: multiCastPublisher)
         
 //        dataService.passThroughPublisher
         sharedPublisher
@@ -246,6 +251,12 @@ class AdvCombineExampViewModel: ObservableObject {
                 self?.dataBools.append(returnedValue)
             }
             .store(in: &cancellable)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            sharedPublisher
+                .connect()
+                .store(in: &self.cancellable)
+        }
     }
     
 }
