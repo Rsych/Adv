@@ -18,6 +18,7 @@
 		7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5027E1C7C4007F1668 /* CustomNavView.swift */; };
 		7122CD5327E1C8CE007F1668 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */; };
 		7122CD5527E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */; };
+		712FA2D327F3463400F96921 /* FuturesCombineExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712FA2D227F3463400F96921 /* FuturesCombineExamp.swift */; };
 		717F772D27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */; };
 		717F773127E3052300336BA9 /* ProtocolExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773027E3052300336BA9 /* ProtocolExamp.swift */; };
 		717F773327E76CFA00336BA9 /* DependencyInjectionExamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */; };
@@ -62,6 +63,7 @@
 		7122CD5027E1C7C4007F1668 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		7122CD5227E1C8CE007F1668 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		7122CD5427E1CA9B007F1668 /* CustomNavBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKey.swift; sourceTree = "<group>"; };
+		712FA2D227F3463400F96921 /* FuturesCombineExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturesCombineExamp.swift; sourceTree = "<group>"; };
 		717F772C27E2FF6000336BA9 /* UIViewControllerRepresentableExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableExamp.swift; sourceTree = "<group>"; };
 		717F773027E3052300336BA9 /* ProtocolExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExamp.swift; sourceTree = "<group>"; };
 		717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionExamp.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				717F773227E76CFA00336BA9 /* DependencyInjectionExamp.swift */,
 				717F773427E8B10C00336BA9 /* UnitTesting */,
 				71F54A6027ED94F600B3E00F /* AdvCombineExamp.swift */,
+				712FA2D227F3463400F96921 /* FuturesCombineExamp.swift */,
 				71BCA07C27AC27D00084F33B /* Assets.xcassets */,
 				71BCA07E27AC27D00084F33B /* Preview Content */,
 			);
@@ -331,6 +334,7 @@
 				71BCA09827AC5F010084F33B /* AnyTransitionExamp.swift in Sources */,
 				7122CD5127E1C7C4007F1668 /* CustomNavView.swift in Sources */,
 				71BCA07B27AC27CF0084F33B /* ContentView.swift in Sources */,
+				712FA2D327F3463400F96921 /* FuturesCombineExamp.swift in Sources */,
 				717F773627E8B11C00336BA9 /* UnitTestingExampView.swift in Sources */,
 				71F54A6127ED94F600B3E00F /* AdvCombineExamp.swift in Sources */,
 				7122CD4327E1BAE6007F1668 /* PreferenceKeyExamp.swift in Sources */,
