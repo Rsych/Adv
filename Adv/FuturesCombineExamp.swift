@@ -22,17 +22,18 @@ class FuturesCombineViewModel: ObservableObject {
     }
     
     func download() {
-//        getCombinePublisher()
-//            .sink { _ in
-//
-//            } receiveValue: { [weak self] returnedValue in
-//                self?.title = returnedValue
-//            }
-//            .store(in: &cancellable)
+        //        getCombinePublisher()
+        getFuturePublisher()
+            .sink { _ in
+                
+            } receiveValue: { [weak self] returnedValue in
+                self?.title = returnedValue
+            }
+            .store(in: &cancellable)
         
-        getEscapingClosure { [weak self] returnedValue, error in
-            self?.title = returnedValue
-        }
+        //        getEscapingClosure { [weak self] returnedValue, error in
+        //            self?.title = returnedValue
+        //        }
     }
     
     func getCombinePublisher() -> AnyPublisher<String, URLError> {
@@ -49,6 +50,29 @@ class FuturesCombineViewModel: ObservableObject {
             completionHandler("New value 2", nil)
         }
         .resume()
+    }
+    
+    func getFuturePublisher() -> Future<String, Error> {
+        Future { promise in
+            self.getEscapingClosure { returnedValue, error in
+                if let error = error {
+                    promise(.failure(error))
+                } else {
+                    promise(.success(returnedValue))
+                }
+            }
+        }
+    }
+    
+    func doSomething(completion: @escaping (_ value: String) -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            completion("New String")
+        }
+    }
+    func doSomethingInTheFuture() -> Future<String, Never> {
+        Future { <#@escaping Future<_, _>.Promise#> in
+            <#code#>
+        }
     }
 }
 
