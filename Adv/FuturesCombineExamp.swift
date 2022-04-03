@@ -70,8 +70,10 @@ class FuturesCombineViewModel: ObservableObject {
         }
     }
     func doSomethingInTheFuture() -> Future<String, Never> {
-        Future { <#@escaping Future<_, _>.Promise#> in
-            <#code#>
+        Future { promise in
+            self.doSomething { value in
+                promise(.success(value))
+            }
         }
     }
 }
